@@ -1,0 +1,142 @@
+@charset "UTF-8"
+
+@import "variables"
+@import "mixins"
+@import "core"
+@import "fonts"
+@import "checkbox"
+@import "valid"
+
+ 
+ 
+.header_baner
+    background:  linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/hero_image.png") center no-repeat
+    position: relative
+    overflow: hidden
+    background-size: cover
+    height: 100vh
+          
+
+
+.header_wrap
+    display: flex
+    flex-direction: column   
+    align-items: center 
+    margin-top: 10%
+     
+    .box        
+        width: 50%
+        min-height: 434px   
+        background:  rgba(255,255,255,0.5)
+        border-radius: 5px
+        box-sizing: border-box
+        padding-top: 30px
+        .box_link
+            font-size: 10px
+            color: $white
+            text-transform: uppercase
+            text-decoration: none
+            margin-left: 30px
+            transition-duration: 500ms
+            transition-property: color
+            &:hover
+                color: $red
+            &::before
+                font-family: FontAwesome
+                content: '\f177'
+                padding-right: 7px
+
+         
+        .box_label
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            .label_img
+                height: 97px             
+            
+        .input_box
+            display: flex
+            flex-direction: column           
+            justify-content: center
+            margin: 22px 125px
+            .input_item
+                margin-bottom: 15px
+                &:nth-child(2)
+                    margin-bottom: 0px
+
+                
+        .chek_link_list
+            display: flex           
+            justify-content: space-between
+            width: 100%
+            padding-left: 0px
+            margin-bottom: 0px
+            height: 35px
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+            .chek_link_list
+                height: 27px
+        .chek_link_list
+
+            .chek_link_item
+                list-style: none
+                position: relative
+
+                label
+                    font-size: 16px
+                    color: $white
+                    margin-top: 0px
+                    padding-top: 10px
+                    
+
+                
+            .chek_link_item--link
+                align-self: flex-end
+                .link
+                    font-size: 16px
+                    color: $white                    
+                    text-decoration: none                    
+                    transition-duration: 500ms
+                    transition-property: color
+                        
+                    &:hover
+                        color: $red
+
+    input[type="submit"]
+        cursor: pointer
+        width: 151px
+        margin: 23px auto
+        margin-bottom: 0px
+        text-transform: uppercase
+        font-size: 12px
+
+@media (max-width: 1024px )
+    .header_wrap
+        margin-top: 20%
+        .box .input_box
+            margin-right: 40px
+            margin-left: 40px
+
+@media (max-width: 780px )
+    .header_wrap
+        margin-top: 30%
+        .box .input_box
+            margin-right: 40px
+            margin-left: 40px
+
+@media (max-width: 420px )
+    .header_wrap .box
+        width: 100%
+    .header_wrap
+        margin-top: 30%
+        .box .input_box
+            margin-right: 10px
+            margin-left: 10px
+
+@media (max-width: 380px )
+    .header_wrap .box
+        width: 100%
+    .header_wrap
+        margin-top: 30%
+        .box .input_box
+            margin-right: 10px
+            margin-left: 10px

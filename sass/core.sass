@@ -1,0 +1,40 @@
+@charset "UTF-8"
+
+
+html
+    font-size: 16px
+    color: $black
+body
+    font-family: 'Roboto', 'Arial', sans-serif
+    overflow-wrap: break-word
+    word-wrap: break-word
+    margin: 0
+    padding: 0 
+
+
+.container
+    @include min-max (320px, 1330vw, 0)
+    
+.wrap
+    @include min-max (320px, 1315px, 15px)
+
+.wrap_content
+    @include min-max (320px, 1600px, 0)
+input
+    padding: 10px 0
+    font-size: 18px
+    color: $black
+    text-align: center
+    border: 1px solid $white
+    border-radius: 25px
+    outline: none
+    width: 100%
+    -webkit-appearance: none
+    background: transparent
+    &:focus
+        background: $white
+   
+    
+
+    
+
