@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Custom CSS Start -->
+    <link rel="stylesheet" href="css/style.min.css" type="text/css">
+    <!-- Custom CSS End -->
+
+    <script src="https://use.fontawesome.com/f01238aeaa.js"></script>
+
+    <title>Test Omni Sale</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header header_baner">
+            <div class="wrap header_wrap">
+                <div class="box">
+                    <a class="box_link" href="##">Вернуться</a>
+                    <div class="box_label">
+                        <img class="label_img" src="img/label.png" alt="лейбл кролик">
+                    </div>
+                    <form id="form" action="/feedback/" method="post"
+                        onsubmit="return (validPhone()&&validPassword()) == true ">
+                        <div class="input_box">
+                            <!-- INPUT_TEL -->
+                            <div class="input_item ">
+                                <input id="tel" class="input_item--tel" type="tel" name="tel" required="required"
+                                    placeholder="Номер телефона" pattern="\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                                    minlength="17" maxlength="17" title="Формат телефона 8 (XXX) XXX-XX-XX"
+                                     >
+
+                            </div>
+                            <!-- INPUT_PASSWORD -->
+                            <div class="input_item">
+                                <input id="password" class="input_item--password" type="password" name="password"
+                                    required="required" placeholder="Пароль" pattern="(?=.*\d)(?=.*[a-z]).{5,}"
+                                    minlength="5" maxlength="10"
+                                    title=" минимум  5 символов и содержать хотя бы одну цифру и один символ нижнего регистра латиницы">
+                            </div>
+                            <!-- CHECKBOX_LINK -->
+                            <ul class="chek_link_list">
+
+                                <!-- CHECKBOX -->
+                                <li class="chek_link_item chek_link_item--chek">
+                                    <input type="checkbox">
+
+                                    <label>Зaпомнить</label>
+
+                                    <!--LINK -->
+                                <li class="chek_link_item chek_link_item--link">
+                                    <a class="link" href="##">Забыл пароль</a>
+                            </ul>
+                            <!--BUTTON_SUBMIT -->
+                            <input id="submit" class="button_submit" type="submit" value="войти">
+                            <!-- <p id="message" >Пожалуйста, заполните все поля формы!</p>  -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </header>
+    </div>
+    <script src="js/all.min.js"></script>
+</body>
+
+</html>
